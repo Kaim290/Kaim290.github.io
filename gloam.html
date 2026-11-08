@@ -12,12 +12,13 @@
 <body id="top" data-game="gloam">
 
     <section class="hero game-hero">
-        <!-- Swap this for a video (<video class="hero-media" ...>) or keep an image -->
-        <img class="hero-media" src="GloamCapsule.jpg" alt="" onerror="this.remove()">
+        <video class="hero-media" autoplay loop muted playsinline>
+            <source src="GloamCapsuleAnimated.mp4" type="video/mp4">
+        </video>
         <div class="hero-content">
             <span class="eyebrow">In development</span>
             <h1>Gloam</h1>
-            <p>A multiplayer co-op dungeon crawler. <!-- TODO: replace with your tagline --></p>
+            <p>A multiplayer co-op dungeon crawler. </p>
         </div>
     </section>
 
@@ -25,33 +26,25 @@
         <div class="wrap">
             <a class="back-link" href="index.html#games">← All games</a>
 
-            <!-- TODO: list Gloam's key features -->
             <ul class="features fade-in">
                 <li>Co-op multiplayer</li>
                 <li>Procedural dungeons</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
+                <li>Proximity Chat</li>
+                <li>Cinematic lighting</li>
+                <li>Opening cutscene</li>
+                <li>Handcrafted environments</li>
             </ul>
 
-            <!-- Copy this block for each section (Combat, Enemies, Dungeon Generation, Art...) -->
             <div class="block fade-in">
-                <h2>Overview</h2>
-                <div class="placeholder">Trailer / gameplay clip goes here</div>
-                <!-- <video class="media" autoplay loop muted playsinline><source src="GloamTrailer.mp4" type="video/mp4"></video> -->
-                <p>Write about Gloam here.</p>
+                <h2>Trailer</h2>
+                <video class="media" controls muted playsinline>
+                    <source src="GloamTrailer.mp4" type="video/mp4">
+                </video>
+                <p>Gloam is - our most polished project to date - a completely networked multiplayer dungeon crawler. Dungeons are randomly generated, containing custom enemies and loot. There are over unique items, scriptable objects, that interact and effect other items creating completely unique runs.</p>
+                <p>For a deeper look at the project, check out the official Steam page.</p>
                 <a class="btn btn-primary" href="https://store.steampowered.com/app/4932360/Gloam/" target="_blank" rel="noopener">
                     <img src="Steam.svg" alt=""> View on Steam
                 </a>
-            </div>
-
-            <!-- Image/video beside text: -->
-            <div class="block fade-in">
-                <h2>Section Title</h2>
-                <div class="split">
-                    <div class="placeholder">GIF or image</div>
-                    <!-- <img src="GloamSomething.gif" class="media" alt=""> -->
-                    <p>Description of this system or feature.</p>
-                </div>
             </div>
 
             <div class="more-games fade-in">
