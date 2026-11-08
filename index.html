@@ -1,276 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kai Miller Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai Miller — Game Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="logo" onclick="location.reload()"> Kai Miller</div>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
+<body id="top" data-header="solid">
 
-  <div class="fade-in">
-  <section id="about">
-<div class="bio-container">
-  <div class="pfp-container">
-  <img src="KaiPFP.jpeg" class="pfp" alt="Profile Picture">
-  <div class="pfp-area">
-    <p class="contact">
-    <a href="mailto:kaiandshane@gmail.com">kaiandshane@gmail.com</a><br>
-    <a href="tel:+6468329896">+1 (646) 832-9896</a> <br>
-    New York, New York</p>
-  </p>
-</div>
-</div>
+    <!-- About -->
+    <section class="section section-alt page-top" id="about">
+        <div class="wrap about fade-in">
+            <div>
+                <img src="KaiPFP.jpeg" class="pfp" alt="Kai Miller">
+                <ul class="contact-list">
+                    <li><a href="mailto:kaiandshane@gmail.com">kaiandshane@gmail.com</a></li>
+                    <li><a href="tel:+16468329896">+1 (646) 832-9896</a></li>
+                    <li>New York, New York</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="section-title">Hello!</h2>
+                <p>
+                    Hey, I’m Kai. I’m a 23-year-old game developer and environment artist with a background in Computer Science.
+                    I love creating immersive worlds, building systems from scratch, and bringing ideas to life inside Unreal Engine.
+                </p>
+                <p>
+                    Ever since I was little, my brother and I have been making video games together. We started in Unity
+                    and eventually moved to Unreal Engine. I'm an artist at heart, and I love taking the ideas in my head
+                    and turning them into something real—that's what keeps me passionate about game development.
+                </p>
+                <p>
+                    My projects range from replicated multiplayer dungeon crawlers to narrative-driven solo horror experiences.
+                    I create all of my assets and environments from scratch, giving each project its own visual identity.
+                </p>
+                <p>
+                    I'm always looking to grow, learn more, refine my skills, and create better, higher-quality projects.
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <div class="bio-text">
-    <h2>Hello!</h2>
-    <p>
-      Hey, I’m Kai. I’m a 23-year-old game developer and environment artist with a background in Computer Science. 
-      I love creating immersive worlds, building systems from scratch, and bringing ideas to life inside Unreal Engine.
-       Ever since I was little, my brother and I have been making video games together. We started in Unity
-      and eventually moved to Unreal Engine. I'm an artist at heart, and I love
-      taking the ideas in my head and turning them into something real—that's what
-      keeps me passionate about game development.
-    </p>
+    <!-- Featured banner: In Her Image -->
+    <section class="hero hero-feature">
+        <video class="hero-media" autoplay loop muted playsinline>
+            <source src="InHerImageTrailer.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content fade-in">
+            <span class="eyebrow">Coming to Steam</span>
+            <h2 class="hero-title">In Her Image</h2>
+            <p>A narrative-driven horror experience built entirely from custom assets, cinematic lighting and handcrafted environments.</p>
+            <div class="hero-actions">
+                <a class="btn btn-ghost" href="in-her-image.html">View game</a>
+            </div>
+        </div>
+    </section>
 
-    <p>
-      My projects range from replicated multiplayer dungeon crawlers to
-      narrative-driven solo horror experiences. I create all of my assets and
-      environments from scratch, giving each project its own visual identity.
-    </p>
+    <!-- Games -->
+    <section class="section" id="games">
+        <div class="wrap fade-in">
+            <h2 class="section-title">Games</h2>
+            <!-- Cards are filled in by site.js (edit the GAMES list there) -->
+            <div class="game-grid" id="game-grid"></div>
+        </div>
+    </section>
 
-    <p>
-      I'm always looking to grow, learn more, refine my skills, and create better,
-      higher-quality projects.
-    </p>
-  </div>
-</div>
-</div>
-  </section>
-
-<section class="projects">
-  <div class="fade-in">
-  <h1>My Unreal Engine Projects</h1>
-
-  <div class="projects-container">
-
-  <a href=#Unhallowed class="card-link">
-  <div class="project-card">
-    <h3>Unhallowed</h3>
-    <p>
-      A dungeon crawler with procedural floors, a grid-based
-      minimap, and unique shop and boss encounters. Every run is entirely dynamic.
-    </p>
-  </div>
-</a>
-
-  <a href=#Halloweenie class="card-link">
-  <div class="project-card">
-    <h3>Halloweenie</h3>
-    <p>
-      A replicated multiplayer dungeon crawler with tile based forest generation. 
-      Customizable skins. Fort and character upgrading and exploration.
-    </p>
-  </div>
-  </a>
-
-  <a href=#InHerImage class="card-link">
-  <div class="project-card">
-    <h3>In Her Image</h3>
-    <p>
-      A narrative driven single player horror game. Focuses on story telling, 
-      environment and atmosphere to create a compelling and chilling experience.
-    </p>
-  </div>
-</div>
-</div>
-</a>
-
-<section id="Unhallowed">
-  <div class="fade-in">
-  <div class="project">
-    <h1>Unhallowed</h1>
-    <ul>
-      <li>Randomly generated dungeon focused on exploration</li>
-      <li>Grid-based minimap displaying dungeon layout, shops, and boss rooms</li>
-      <li>Two boss fights</li>
-      <li>Early multiplayer functionality</li>
-      <li>Physics handle system allowing object pickup and throwing</li>
-      <li>Partially functioning shop</li>
-      <li>Multiple handcrafted environments (no downloaded assets or textures)</li>
-      <li>Early school project with rough design but strong visuals</li>
-    </ul>
-<br>
-    <h2>Map Generation </h2>
-    <div class="row">
-      <img src="UnhallowedMinimap.gif" class="side-img">
-      <p class="middle-text">
-        Minimap generates according to the tile based map. Skull is the boss room. Crown is the shop. Trap door is 
-        the spawn room.</p>
-  </div>
-  
-    <div class="row">
-      <p class="middle-text">
-        Birds eye view of the randomly tile based map</p>
-        <img src="UnhallowedMap.gif" class="side-img">
-  </div>
-  <br>
-  <h2>Bosses</h2>
-  <br>
-  <video autoplay loop muted playsinline>
-    <source src="UnhallowedBosses.mp4">
-  </video>
-  <p> This clip showcases two of the project’s major boss encounters.
-• The Gravemound — A hulking creature built from tombstones, bones, and graveyard debris. My brother created the base model, while I handled weight-painting, animation integration, and AI behavior.
-• The Reaper — A skeletal warlock who uses ranged magic, AOE abilities, and teleport attacks. I created and simulated his cloak in Blender, handled the weight-painting, integrated both Mixamo and custom animations, and developed the behavior system. </p>
-    <br>
-    <div class="row">
-    <video width="540" height="720" autoplay loop muted playsinline>
-    <source src="UnhallowedBossRetargeting.mp4" type="video/mp4">
-      </video>
-    <p class="middle-text">
-      Here are some animation retargets for the boss, the reaper. Once characters are rigged and weight painted we retarget them mostly using
-      animations from Mixamo. </p>
-  </div>
-  <br>
-
-    <h2> Phyics Handle </h2>
-    <img src="UnhallowedPhysicsHandle.gif">
-    <p> I implemented a physics-based interaction system allowing the player to pick up, move, and throw various objects—crates, furniture, and environmental props. One early limitation was that players could stand on objects they were holding, enabling unintended movement exploits.
-    </p>
-
-<h2> Map Showcase </h2>
-  <video width="1080" height="720" autoplay loop muted playsinline>
-    <source src="UnhallowedMapShowcase.mp4" type="video/mp4">
-  </video>
-The project features two distinct environments:
-• A procedurally generated dungeon, built using a tile-based system and atmospheric lighting.
-• A handcrafted lush forest area, created entirely from custom Blender assets and Unreal’s foliage tools.
-Both regions were designed to contrast visually and give the world a sense of depth and variety.
-  </div>
-</section>
-
-<section id="Halloweenie">
-  <div class="fade-in">
-  <div class="project">
-    <h1>Halloweenie</h1>
-    <ul>
-      <li>Fully replicated multiplayer dungeon generation system</li>
-      <li>Replicated player animations and enemy behavior</li>
-      <li>Skin customization system</li>
-      <li>Steam subsystem integration</li>
-      <li>Custom horror jumpscares</li>
-      <li>Death system with spectating and respawning</li>
-      <li>GameMode-handled life cycle for all players</li>
-      <li>Varied environments: outdoor area, randomly generated forest, mines zone</li>
-      <li>Visually stunning but ultimately shelved project</li>
-    </ul>
-  </div>
-  <br>
-  <h2>Multiplayer</h2>
-  <h3>Lobbies</h3>
-    <div class="row">
-      <img src="HalloweenieLobby.gif" class="side-img">
-      <p class="middle-text">
-        A lobby system where players can create servers and join them</p>
-  </div>
-  <br>
-  <h3>Spawning System</h3>
-  <img src="HalloweenieSpawnPlayers.gif" class="side-img" style="width: 100%" height="auto">
-  <p> Once all players join the server, or all players are dead the server respawns the players</p>
-  <br>
-
-  <h3>Multiplayer Gameplay</h3>
-<video autoplay loop muted playsinline>
-  <source src="HalloweenieMultiplayer.mp4">
-  </video>
-  <p>Once all players join a session, they can freely explore the world together. Player animations, item interactions, and enemy AI all replicate seamlessly across the server, creating a smooth and synchronized multiplayer experience. 
-  </p>
-  <h2>Maps</h2>
-  <br>
-  <video autoplay loop muted playsinline>
-    <source src="HalloweenieRandomMap.mp4">
-  </video>
-  <strong>Forest</strong> <br>The forest uses an expanded version of the tile-based generation system from Unhallowed. Instead of placing individual tiles, the algorithm assembles full level chunks, allowing for larger, more natural outdoor environments with greater variation each run.. </p>
-<br>
-  <video autoplay loop muted playsinline>
-  <source src="HalloweenieBuiltMap.mp4">
-  </video>
-      <strong>Town</strong> <br> The town is a fully handcrafted environment featuring a fort, central settlement, train-station-style hub, and entry point to an underground mine system. All major structures and props were built and arranged manually. </p>
-    <br>
-      <video autoplay loop muted playsinline>
-  <source src="HalloweenieMines.mp4">
-  </video>
-      <strong>Mines</strong> <br>The mines extend from the edge of town into a dark, branching tunnel network. Players search for dynamite to clear blocked passages while an unseen threat stalks them from the shadows, heightening the tension as they progress. </p>
-    <br>
-    <h2>Skin Customization</h2>
-    <div class="row">
-    <img src="HalloweenieSkinCustomization.gif" style="width: 75%">
-          <p class="middle-text">
-      <br> A fully replicated customization system allows players to personalize their character’s appearance with different skins and cosmetic variations, all synchronized across the network for other players to see. </p>
-    </div>
-    <br>
-    <div class="row">
-          <p class="middle-text">
-       <strong> Chaos Physics! </strong> <br> This demo showcases Unreal Engine’s Chaos physics system. Objects fracture into smaller simulated pieces, creating dynamic destruction effects that can be used for clearing blocked pathways or adding environmental interaction. </p>
-    <img src="HalloweenieChaosPhysics.gif" width="540" height="auto">
-  </div>
-    <div class="row">
-          <video width="540" height="720" autoplay loop muted playsinline>
-    <source src="HalloweenieBarriers.mp4" type="video/mp4">
-      </video>
-          <p class="middle-text">
-       <strong> Barriers </strong> <br> A barrier system. You can place materials, and once they're placed enemeies can destroy them.
-      Once they're destroyed you can rebuild them without having to reexpend the materials. </p>
-  </div>
-
-</section>
-
-<section id="InHerImage">
-  <div class="fade-in">
-  <div class="project">
-    <h1>In Her Image</h1>
-    <ul>
-      <li>Single player horror project releasing on Steam</li>
-      <li>Deep, story-driven design</li>
-      <li>All assets created custom</li>
-      <li>Cinematic lighting and atmosphere</li>
-      <li>Opening cutscene and fully handcrafted environments</li>
-    </ul>
-  </div>
-  </div>
-<video width="1080" height="720" autoplay loop muted playsinline>
-    <source src="InHerImageTrailer.mp4" type="video/mp4">
-  </video>
-  <p>This trailer highlights In Her Image, our most polished project to date—a narrative-driven horror experience built entirely with custom assets and cinematic lighting. The full game features handcrafted environments, an opening cutscene, and a strong emphasis on atmosphere and storytelling. For a deeper look at the project, you can view the official Steam page below.
-  </p>
-    <a href="https://store.steampowered.com/app/4053030/In_Her_Image/" target="_blank"> 
-      <img src="Steam.svg" alt="Steam" style="width:45px;height:45px;"> </a>
-</section>
+    <script src="site.js"></script>
 </body>
-
-<script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible'); 
-    } else {
-      entry.target.classList.remove('visible');
-    }
-  });
-}, {
-  threshold: 0.1 
-});
-
-document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-</script>
-
 </html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halloweenie — Kai Miller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top" data-game="halloweenie">
+
+  <section class="hero game-hero">
+    <video class="hero-media" autoplay loop muted playsinline>
+      <source src="HalloweenieBuiltMap.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <span class="eyebrow">Unreal Engine · Multiplayer</span>
+      <h1>Halloweenie</h1>
+      <p>A replicated multiplayer dungeon crawler with tile-based forest generation, customizable skins, and fort and character upgrading.</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="wrap">
+      <a class="back-link" href="index.html#games">← All games</a>
+
+      <ul class="features fade-in">
+        <li>Replicated dungeon generation</li>
+        <li>Replicated animations &amp; enemy AI</li>
+        <li>Skin customization</li>
+        <li>Steam subsystem integration</li>
+        <li>Custom jumpscares</li>
+        <li>Spectating &amp; respawning</li>
+        <li>GameMode-driven player life cycle</li>
+        <li>Forest, town &amp; mines zones</li>
+      </ul>
+
+      <div class="block fade-in">
+        <h2>Multiplayer</h2>
+
+        <h3>Lobbies</h3>
+        <div class="split tall">
+          <img src="HalloweenieLobby.gif" class="media" alt="Lobby system">
+          <p>A lobby system where players can create servers and join them.</p>
+        </div>
+
+        <h3>Spawning System</h3>
+        <img src="HalloweenieSpawnPlayers.gif" class="media" alt="Player spawning">
+        <p>Once all players join the server, or all players are dead, the server respawns the players.</p>
+
+        <h3>Multiplayer Gameplay</h3>
+        <video class="media" autoplay loop muted playsinline>
+          <source src="HalloweenieMultiplayer.mp4" type="video/mp4">
+        </video>
+        <p>Once all players join a session, they can freely explore the world together. Player animations, item interactions, and enemy AI all replicate seamlessly across the server, creating a smooth and synchronized multiplayer experience.</p>
+      </div>
+
+      <div class="block fade-in">
+        <h2>Maps</h2>
+
+        <h3>Forest</h3>
+        <video class="media" autoplay loop muted playsinline>
+          <source src="HalloweenieRandomMap.mp4" type="video/mp4">
+        </video>
+        <p>The forest uses an expanded version of the tile-based generation system from Unhallowed. Instead of placing individual tiles, the algorithm assembles full level chunks, allowing for larger, more natural outdoor environments with greater variation each run.</p>
+
+        <h3>Town</h3>
+        <video class="media" autoplay loop muted playsinline>
+          <source src="HalloweenieBuiltMap.mp4" type="video/mp4">
+        </video>
+        <p>The town is a fully handcrafted environment featuring a fort, central settlement, train-station-style hub, and entry point to an underground mine system. All major structures and props were built and arranged manually.</p>
+
+        <h3>Mines</h3>
+        <video class="media" autoplay loop muted playsinline>
+          <source src="HalloweenieMines.mp4" type="video/mp4">
+        </video>
+        <p>The mines extend from the edge of town into a dark, branching tunnel network. Players search for dynamite to clear blocked passages while an unseen threat stalks them from the shadows, heightening the tension as they progress.</p>
+      </div>
+
+      <div class="block fade-in">
+        <h2>Systems</h2>
+
+        <div class="split">
+          <img src="HalloweenieSkinCustomization.gif" class="media" alt="Skin customization">
+          <div>
+            <h3>Skin Customization</h3>
+            <p>A fully replicated customization system lets players personalize their character’s appearance with different skins and cosmetic variations, all synchronized across the network for other players to see.</p>
+          </div>
+        </div>
+
+        <div class="split reverse">
+          <img src="HalloweenieChaosPhysics.gif" class="media" alt="Chaos physics destruction">
+          <div>
+            <h3>Chaos Physics</h3>
+            <p>A demo of Unreal Engine’s Chaos physics system. Objects fracture into smaller simulated pieces, creating dynamic destruction effects that can clear blocked pathways or add environmental interaction.</p>
+          </div>
+        </div>
+
+        <div class="split tall">
+          <video class="media" autoplay loop muted playsinline>
+            <source src="HalloweenieBarriers.mp4" type="video/mp4">
+          </video>
+          <div>
+            <h3>Barriers</h3>
+            <p>Players place materials to build barriers, which enemies can destroy. Destroyed barriers can be rebuilt without spending the materials again.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="more-games fade-in">
+        <h2>More Games</h2>
+        <div class="game-grid" id="more-games"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="site.js"></script>
+</body>
+</html>

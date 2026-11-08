@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unhallowed — Kai Miller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top" data-game="unhallowed">
+
+  <section class="hero game-hero">
+    <video class="hero-media" autoplay loop muted playsinline>
+      <source src="UnhallowedMapShowcase.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <span class="eyebrow">Unreal Engine · School project</span>
+      <h1>Unhallowed</h1>
+      <p>A dungeon crawler with procedural floors, a grid-based minimap, and unique shop and boss encounters. Every run is entirely dynamic.</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="wrap">
+      <a class="back-link" href="index.html#games">← All games</a>
+
+      <ul class="features fade-in">
+        <li>Randomly generated dungeon</li>
+        <li>Grid-based minimap</li>
+        <li>Two boss fights</li>
+        <li>Early multiplayer</li>
+        <li>Physics pickup &amp; throwing</li>
+        <li>Partially functioning shop</li>
+        <li>100% handcrafted assets &amp; textures</li>
+      </ul>
+
+      <div class="block fade-in">
+        <h2>Map Generation</h2>
+        <div class="split tall">
+          <img src="UnhallowedMinimap.gif" class="media" alt="Unhallowed minimap">
+          <p>The minimap generates according to the tile-based map. The skull is the boss room, the crown is the shop, and the trap door is the spawn room.</p>
+        </div>
+        <div class="split tall reverse">
+          <img src="UnhallowedMap.gif" class="media" alt="Bird's-eye view of the generated map">
+          <p>A bird's-eye view of the randomly generated, tile-based map.</p>
+        </div>
+      </div>
+
+      <div class="block fade-in">
+        <h2>Bosses</h2>
+        <video class="media" autoplay loop muted playsinline>
+          <source src="UnhallowedBosses.mp4" type="video/mp4">
+        </video>
+        <p>This clip showcases two of the project’s major boss encounters.</p>
+        <ul class="bullets">
+          <li><strong>The Gravemound</strong> — A hulking creature built from tombstones, bones, and graveyard debris. My brother created the base model, while I handled weight-painting, animation integration, and AI behavior.</li>
+          <li><strong>The Reaper</strong> — A skeletal warlock who uses ranged magic, AOE abilities, and teleport attacks. I created and simulated his cloak in Blender, handled the weight-painting, integrated both Mixamo and custom animations, and developed the behavior system.</li>
+        </ul>
+        <div class="split tall">
+          <video class="media" autoplay loop muted playsinline>
+            <source src="UnhallowedBossRetargeting.mp4" type="video/mp4">
+          </video>
+          <p>Animation retargets for the Reaper. Once characters are rigged and weight painted, we retarget them mostly using animations from Mixamo.</p>
+        </div>
+      </div>
+
+      <div class="block fade-in">
+        <h2>Physics Handle</h2>
+        <img src="UnhallowedPhysicsHandle.gif" class="media" alt="Physics handle demo">
+        <p>I implemented a physics-based interaction system allowing the player to pick up, move, and throw various objects—crates, furniture, and environmental props. One early limitation was that players could stand on objects they were holding, enabling unintended movement exploits.</p>
+      </div>
+
+      <div class="block fade-in">
+        <h2>Map Showcase</h2>
+        <video class="media" autoplay loop muted playsinline>
+          <source src="UnhallowedMapShowcase.mp4" type="video/mp4">
+        </video>
+        <p>The project features two distinct environments, designed to contrast visually and give the world a sense of depth and variety:</p>
+        <ul class="bullets">
+          <li>A procedurally generated dungeon, built using a tile-based system and atmospheric lighting.</li>
+          <li>A handcrafted lush forest area, created entirely from custom Blender assets and Unreal’s foliage tools.</li>
+        </ul>
+      </div>
+
+      <div class="more-games fade-in">
+        <h2>More Games</h2>
+        <div class="game-grid" id="more-games"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="site.js"></script>
+</body>
+</html>
