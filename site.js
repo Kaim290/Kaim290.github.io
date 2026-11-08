@@ -13,7 +13,7 @@ const GAMES = [
 // Visual art: put image files in an "art" folder and add one line per piece.
 // The homepage shows the first 4; visual-art.html shows them all.
 const ART = [
-  { src: 'art/AutumnDigital.jpg',                        title: 'Autumn · Digital' },
+  { src: 'AutumnDigital.jpg',                        title: 'Autumn · Digital' },
   { src: 'art/BeachDigital.jpg',                         title: 'Beach · Digital' },
   { src: 'art/BeachOilPaint.jpg',                        title: 'Beach · Oil Paint' },
   { src: 'art/BlackWomanGreenPortraitDigital.jpg',       title: 'Portrait in Green · Digital' },
