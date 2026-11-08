@@ -10,6 +10,32 @@ const GAMES = [
   { id: 'unhallowed', title: 'Unhallowed',   page: 'unhallowed.html',   img: 'UnhallowedCapsule.jpg', blurb: 'Procedural dungeon crawler with boss fights.' }
 ];
 
+// Visual art: put image files in an "art" folder and add one line per piece.
+// The homepage shows the first 4; visual-art.html shows them all.
+const ART = [
+  { src: 'art/AutumnDigital.jpg',                        title: 'Autumn · Digital' },
+  { src: 'art/BeachDigital.jpg',                         title: 'Beach · Digital' },
+  { src: 'art/BeachOilPaint.jpg',                        title: 'Beach · Oil Paint' },
+  { src: 'art/BlackWomanGreenPortraitDigital.jpg',       title: 'Portrait in Green · Digital' },
+  { src: 'art/CanyonOilPaint.jpg',                       title: 'Canyon · Oil Paint' },
+  { src: 'art/Field.jpg',                                title: 'Field' },
+  { src: 'art/GhibiliOilPaint.jpg',                      title: 'Ghibli Study · Oil Paint' },
+  { src: 'art/GifuSunset.jpg',                           title: 'Gifu Sunset' },
+  { src: 'art/Horse.jpg',                                title: 'Horse' },
+  { src: 'art/JungleRiverOilPastel.jpg',                 title: 'Jungle River · Oil Pastel' },
+  { src: 'art/KyotoLakeOilPaint.jpg',                    title: 'Kyoto Lake · Oil Paint' },
+  { src: 'art/LemonsOilPaint.jpg',                       title: 'Lemons · Oil Paint' },
+  { src: 'art/MaineCliffside.jpg',                       title: 'Maine Cliffside' },
+  { src: 'art/MoggingBlackdudePortraitDigital.jpg',      title: 'Portrait · Digital' },
+  { src: 'art/MountainRangeOilPaint.jpg',                title: 'Mountain Range · Oil Paint' },
+  { src: 'art/PigeonsOilPaint.jpg',                      title: 'Pigeons · Oil Paint' },
+  { src: 'art/PumpkinOilPaint.jpg',                      title: 'Pumpkin · Oil Paint' },
+  { src: 'art/RockyPeachOilPaint.jpg',                   title: 'Rocky Peach · Oil Paint' },
+  { src: 'art/RuinsOilPaint.jpg',                        title: 'Ruins · Oil Paint' },
+  { src: 'art/SunsetOilPaint.jpg',                       title: 'Sunset · Oil Paint' },
+  { src: 'art/Waterfall.jpeg',                           title: 'Waterfall' },
+];
+
 const EMAIL = 'kaiandshane@gmail.com';
 
 // Hides a capsule image that hasn't been added yet, so the card shows its gradient instead
@@ -36,6 +62,7 @@ header.innerHTML = `
   <nav class="site-nav">
     <a href="index.html#about">About</a>
     <a href="index.html#games">Games</a>
+    <a href="visual-art.html">Art</a>
     <a href="#contact">Contact</a>
   </nav>`;
 document.body.prepend(header);
@@ -58,6 +85,48 @@ if (more && current) {
   more.innerHTML = GAMES.filter(g => g.id !== current).map(cardHTML).join('');
 }
 
+// ---------- Visual art (homepage preview + gallery page) ----------
+function artTileHTML(a, i) {
+  return `
+    <button class="art-tile" data-index="${i}" aria-label="${a.title || 'Artwork'}">
+      <img src="${a.src}" alt="${a.title || ''}" loading="lazy">
+      ${a.title ? `<span class="art-caption">${a.title}</span>` : ''}
+    </button>`;
+}
+
+function emptyTiles(n) {
+  return Array.from({ length: n }, () => '<div class="art-tile empty">Art coming soon</div>').join('');
+}
+
+const artPreview = document.getElementById('art-preview');
+if (artPreview) {
+  artPreview.innerHTML = ART.length ? ART.slice(0, 4).map(artTileHTML).join('') : emptyTiles(4);
+}
+
+const gallery = document.getElementById('gallery');
+if (gallery) {
+  gallery.innerHTML = ART.length ? ART.map(artTileHTML).join('') : emptyTiles(6);
+}
+
+// Click a piece to view it large; click anywhere or press Esc to close
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.innerHTML = '<img alt=""><p></p>';
+document.body.append(lightbox);
+
+document.addEventListener('click', (e) => {
+  const tile = e.target.closest('.art-tile[data-index]');
+  if (tile) {
+    const a = ART[tile.dataset.index];
+    lightbox.querySelector('img').src = a.src;
+    lightbox.querySelector('p').textContent = a.title || '';
+    lightbox.classList.add('open');
+  } else if (e.target.closest('.lightbox')) {
+    lightbox.classList.remove('open');
+  }
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+
 // ---------- Footer ----------
 const footer = document.createElement('footer');
 footer.className = 'site-footer';
@@ -74,10 +143,11 @@ footer.innerHTML = `
         <ul>${GAMES.map(g => `<li><a href="${g.page}">${g.title}</a></li>`).join('')}</ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4>More</h4>
         <ul>
+          <li><a href="more-about-me.html">More about me</a></li>
+          <li><a href="visual-art.html">Visual art</a></li>
           <li><a href="mailto:${EMAIL}">Email</a></li>
-          <li><a href="index.html#about">About me</a></li>
         </ul>
       </div>
     </div>
